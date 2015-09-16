@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cc.client360"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    
+     <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+       <!-- 存储所需权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <!-- 百度定位所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Test for my app"
+        android:targetPackage="com.cc.dDriver360" />
+    
+    
+    <application
+        android:name="com.cc.client360.ExpressApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cc.client360.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+          <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        
+        
+        
+        <!-- 选择页面 -->
+       <activity 
+            android:name="com.cc.client360.SelectActivity" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"/>   
+            
+       
+        <!-- 地图和列表 android:launchMode="singleTask"  -->
+       <activity 
+           android:theme="@style/Theme"
+            android:name="com.cc.client360.IndexActivity" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"/>    
+       <!-- 多人预约 -->
+       <activity 
+            android:theme="@style/Theme"
+            android:name="com.cc.client360.AppointmentActivity" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"/>     
+       <!-- 价格明细-->
+       <activity 
+           android:theme="@style/Theme"
+            android:name="com.cc.client360.PriceActivity" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"/>     
+        <!--  邀请好友  -->
+        <activity 
+            android:theme="@style/Theme"
+            android:name="com.cc.client360.InvitationActivity" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"/> 
+        <!--  更多  -->
+        <activity 
+           android:theme="@style/Theme"
+            android:name="com.cc.client360.MoreActivity" 
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="stateHidden|adjustPan"/>  
+        
+        
+    </application>
+
+</manifest>

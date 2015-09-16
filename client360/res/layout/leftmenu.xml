@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 左侧栏的布局 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/left_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/left_top"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="23sp"
+        android:text="路名"/>
+    
+	<ScrollView  
+	   android:layout_width="fill_parent"
+	   android:layout_height="fill_parent"
+	   android:fadingEdge="none">
+	   
+	   <LinearLayout 
+	       android:layout_width="fill_parent"
+	       android:layout_height="fill_parent"
+	       android:orientation="vertical">
+
+		   <RelativeLayout 
+		        android:id="@+id/state"
+		        style="@style/leftRelativeLayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/left_item_normal">
+		        
+		        <ImageView 
+		            android:id="@+id/stateImg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/left_state"/>
+		        
+		        <TextView
+		            android:id="@+id/stateText"
+		            style="@style/leftItemText"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dip"
+		            android:layout_toRightOf="@+id/stateImg"
+		            android:layout_toLeftOf="@+id/stateArrow"
+		            android:layout_centerVertical="true"
+		            android:text="查看附近的司机"/>
+		        
+		        <ImageView 
+		            android:id="@+id/stateArrow"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:src="@drawable/arrow_normal"/>
+		        
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+		        android:id="@+id/location"
+		        style="@style/leftRelativeLayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/left_item_normal">
+		        
+		        <ImageView 
+		            android:id="@+id/locationImg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/left_location"/>
+		        
+		        <TextView
+		            android:id="@+id/locationText"
+		            style="@style/leftItemText"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dip"
+		            android:layout_toRightOf="@+id/locationImg"
+		            android:layout_toLeftOf="@+id/locationArrow"
+		            android:layout_centerVertical="true"
+		            android:text="多人预约"/>
+		        
+		        <ImageView 
+		            android:id="@+id/locationArrow"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:src="@drawable/arrow_normal"/>
+		        
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+		        android:id="@+id/order"
+		        style="@style/leftRelativeLayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/left_item_normal">
+		        
+		        <ImageView 
+		            android:id="@+id/orderImg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/left_order"/>
+		        
+		        <TextView
+		            android:id="@+id/orderText"
+		            style="@style/leftItemText"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dip"
+		            android:layout_toRightOf="@+id/orderImg"
+		            android:layout_toLeftOf="@+id/orderArrow"
+		            android:layout_centerVertical="true"
+		            android:text="价格明细表"/>
+		        
+		        <ImageView 
+		            android:id="@+id/orderArrow"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:src="@drawable/arrow_normal"/>
+		        
+		    </RelativeLayout>
+		    
+		    <RelativeLayout 
+		        android:id="@+id/wallet"
+		        style="@style/leftRelativeLayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/left_item_normal">
+		        
+		        <ImageView 
+		            android:id="@+id/walletImg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/left_wallet"/>
+		        
+		        <TextView
+		            android:id="@+id/walletText"
+		            style="@style/leftItemText"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dip"
+		            android:layout_toRightOf="@+id/walletImg"
+		            android:layout_toLeftOf="@+id/walletArrow"
+		            android:layout_centerVertical="true"
+		            android:text="邀请好友"/>
+		        
+		        <ImageView 
+		            android:id="@+id/walletArrow"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:src="@drawable/arrow_normal"/>
+		        
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:id="@+id/notice" 
+		        style="@style/leftRelativeLayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/left_item_normal">
+		        
+		        <ImageView 
+		            android:id="@+id/noticeImg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/left_notice"/>
+		        
+		        <TextView
+		            android:id="@+id/noticeText"
+		            style="@style/leftItemText"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dip"
+		            android:layout_toRightOf="@+id/noticeImg"
+		            android:layout_toLeftOf="@+id/noticeArrow"
+		            android:layout_centerVertical="true"
+		            android:text="更多"/>
+		        
+		        <ImageView 
+		            android:id="@+id/noticeArrow"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:src="@drawable/arrow_normal"/>
+		        
+		    </RelativeLayout>
+	   
+	   </LinearLayout >
+    
+    </ScrollView>
+	
+</LinearLayout>
+

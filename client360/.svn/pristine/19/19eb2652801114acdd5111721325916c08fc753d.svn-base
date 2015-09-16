@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+	
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/LinearLayout"
+        android:src="@drawable/select_b"/>
+
+    <LinearLayout 
+        android:id="@+id/LinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         android:layout_alignParentBottom="true"
+        >
+        <Button
+        android:id="@+id/driver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/select_button_driver" />
+
+        <Button
+            android:id="@+id/serverdriver"
+            android:layout_width="fill_parent"
+                android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_button_serverdriver" />
+
+    </LinearLayout>
+   
+    
+    
+    
+    
+    
+    
+</RelativeLayout>

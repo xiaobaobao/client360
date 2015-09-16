@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/overlay_driver_togethor"
+    android:gravity="center"
+    android:orientation="vertical">
+        
+    <TextView 
+	    android:id="@+id/nameTv"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:maxLength="6"
+	    android:textColor="@color/colorGray"
+	    android:textSize="13sp"
+	    android:text="范长龙长龙长龙"/>
+	
+	<ImageView 
+	    android:id="@+id/star"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="0dip"
+	    android:src="@drawable/overlay_star_yellow"/>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    
+    <!-- 左边SlidingMenu的属性值 -->
+	<!-- menu显示时，content页显示的区域宽度 -->
+    <dimen name="slidingmenu_offset">40dp</dimen>
+	<!--     阴影的宽度 -->
+    <dimen name="shadow_width">15dp</dimen>
+	
+</resources>

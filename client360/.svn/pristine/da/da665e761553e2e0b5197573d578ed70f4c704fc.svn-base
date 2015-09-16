@@ -1,0 +1,253 @@
+<RelativeLayout 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     >
+
+     <com.baidu.mapapi.map.MapView 
+        android:id="@+id/bmapsView"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent" 
+        android:clickable="true" 
+        android:visibility="visible"
+        >
+     </com.baidu.mapapi.map.MapView> 
+       
+      <TextView 
+         android:id="@+id/shuaxin"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textColor="@color/colorWhite"
+         android:background="@drawable/fuwei"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="50dp"
+         />
+     
+     
+                                 <SlidingDrawer 
+							     android:id="@+id/drawer1"
+								 android:layout_width="fill_parent" 
+								 android:layout_height="fill_parent"
+		                         android:layout_marginTop="50dp"
+								 android:orientation="vertical" 
+								 android:layout_alignParentBottom="true"
+								 android:handle="@+id/myImage"
+								 android:visibility="visible"
+								 android:content="@+id/mycontent1">
+						
+						
+											             <RelativeLayout
+										                 android:id="@+id/myImage"
+										                 android:layout_width="fill_parent"
+										                 android:layout_height="wrap_content"
+										                 android:background="#cc2C2B29"
+										                 >
+										                 
+											                <!-- 
+											                (2C, 2B, 29)
+											                  android:background="#bb2F2D2E"
+											                 --> 
+											                 
+														<TextView
+														    android:id="@+id/jgjsq"
+												             android:layout_width="wrap_content"
+												             android:layout_height="wrap_content"
+												             android:layout_marginTop="10dp"
+												             android:layout_centerHorizontal="true"
+												             android:text="代驾价格计算器"
+												             android:textSize="20dip"
+												             android:textColor="#ffffff"
+												             />
+														<ImageView 
+														    android:id="@+id/upanddown"
+														    android:layout_width="wrap_content"
+														    android:layout_height="wrap_content"
+														    android:src="@drawable/d_up"
+														    android:layout_toRightOf="@+id/jgjsq"
+														    android:layout_marginLeft="20dp"
+														    android:layout_marginTop="5dp"
+														    />
+											          </RelativeLayout>
+		 
+	             
+	             
+												          <RelativeLayout 
+												           android:id="@id/mycontent1" 
+												           android:layout_width="fill_parent"
+													       android:layout_height="fill_parent" 
+													         android:background="#cc2C2B29"
+													       android:layout_below="@+id/myImage"
+												           >
+															
+												             <RelativeLayout 
+												                 android:id="@+id/re"
+												                 android:layout_width="fill_parent"
+												                 android:layout_height="fill_parent"
+												                 android:layout_marginTop="20dp"
+												                 android:layout_marginLeft="20dp"
+												                 android:layout_marginRight="15dp"
+												                 >
+														             <TextView 
+														             android:id="@+id/from_tv"  
+														             android:layout_width="wrap_content"
+														             android:layout_height="wrap_content"
+														             android:text="出发地"
+														             android:textSize="22dip"
+														             android:textColor="#ffffff"/>
+														             
+														             <EditText 
+														                 android:id="@+id/from"
+														                 android:layout_width="fill_parent"
+														                 android:layout_height="22dp"
+														                 android:layout_toRightOf="@+id/from_tv"
+														                 android:layout_marginLeft="10dp"
+														                 android:layout_alignTop="@+id/from_tv" 
+														                 android:layout_alignBottom="@+id/from_tv" 
+														                 android:padding="5dp"
+														                 android:text="起始地址" 
+														                 android:textSize="16dip"
+														                 android:textColor="#ffffff"
+														                 android:background="@drawable/fromandto_box"
+														                 android:singleLine="true"
+														                 android:ellipsize="end"
+														                 />
+				             
+															             
+															              <TextView 
+															             android:id="@+id/to_tv"  
+															             android:layout_width="wrap_content"
+															             android:layout_height="wrap_content"
+															             android:text="目的地"
+															             android:textSize="22dip"
+															             android:textColor="#ffffff"
+															             android:layout_below="@+id/from_tv"
+															             android:layout_marginTop="10dp"
+															             android:layout_alignLeft="@+id/from_tv"
+															             />
+															             
+															             <EditText 
+															                 android:id="@+id/to"
+															                 android:layout_width="fill_parent"
+															                 android:layout_height="22dp"
+															                 android:layout_toRightOf="@+id/to_tv"
+															                 android:layout_marginLeft="10dp"
+															                 android:layout_alignTop="@+id/to_tv" 
+															                 android:layout_alignBottom="@+id/to_tv" 
+															                 android:padding="5dp"
+															                 android:singleLine="true"
+															                 android:ellipsize="end"
+															                 android:text="" 
+															                 android:textSize="16dip"
+															                 android:textColor="#ffffff"
+															                 android:background="@drawable/fromandto_box"
+															                 />
+				             
+												             
+												             <TextView 
+												                 android:id="@+id/jisaunjiage"
+												                 android:layout_width="100dp"
+												                 android:layout_height="wrap_content"
+												                 android:background="@drawable/d_confirm"
+												                 android:layout_marginTop="15dp"
+												                 android:layout_below="@+id/to"
+												                 android:layout_alignLeft="@+id/from"
+												                 android:textColor="#ffffff"
+												                 android:text="估算价格"
+												                 android:gravity="center"
+												                android:textSize="15dp"
+												                 />
+												             
+												             
+												              <TextView 
+												                 android:id="@+id/cankaojiage"
+												                 android:layout_width="wrap_content"
+												                 android:layout_height="wrap_content"
+												                 android:layout_marginTop="15dp"
+												                 android:layout_below="@+id/jisaunjiage"
+												                 android:layout_centerHorizontal="true"
+												                 android:textColor="#ffffff"
+												                 android:text="很高心为您预测代驾价格,供君参考!"
+												                 android:gravity="center"
+												                 android:textSize="16dp"
+												                 />
+								
+												               <TextView
+												                   android:id="@+id/dayue"
+												                   android:layout_width="wrap_content"
+												                   android:layout_height="wrap_content"
+												                   android:layout_alignTop="@+id/re22"
+												                   android:layout_marginTop="41dp"
+												                   android:layout_toLeftOf="@+id/re22"
+												                   android:text="大约"
+												                   android:textColor="#ffffff"
+												                   android:textSize="20dp" />
+								
+																		              
+										               <RelativeLayout
+										                   android:id="@+id/re22"
+										                   android:layout_width="wrap_content"
+										                   android:layout_height="wrap_content"
+										                   android:layout_alignLeft="@+id/jisaunjiage"
+										                   android:layout_below="@+id/cankaojiage"
+										                   android:layout_marginTop="20dp"
+										                   android:background="@drawable/d_circlegray" >
+						
+										                   <TextView
+										                       android:id="@+id/yuan"
+										                       android:layout_width="wrap_content"
+										                       android:layout_height="wrap_content"
+										                       android:layout_alignParentLeft="true"
+										                       android:layout_alignParentTop="true"
+										                       android:layout_marginLeft="30dp"
+										                       android:layout_marginTop="36dp"
+										                       android:text=""
+										                       android:textColor="#ffffff"
+										                       android:textSize="20dp" />
+						
+										                   <TextView
+										                       android:id="@+id/gongli"
+										                       android:layout_width="wrap_content"
+										                       android:layout_height="wrap_content"
+										                       android:layout_alignLeft="@+id/yuan"
+										                       android:layout_below="@+id/yuan"
+										                       android:text=""
+										                       android:textColor="#ffffff"
+										                       android:textSize="15dp" />
+						
+										                   <TextView
+										                       android:id="@+id/tv_gongli"
+										                       android:layout_width="wrap_content"
+										                       android:layout_height="wrap_content"
+										                       android:layout_alignBottom="@+id/gongli"
+										                       android:layout_toRightOf="@+id/gongli"
+										                       android:layout_alignLeft="@+id/tv_yuan"
+										                       android:text="公里"
+										                       android:textColor="#ffffff"
+										                       android:textSize="15dp" />
+						
+										                   <TextView
+										                       android:id="@+id/tv_yuan"
+										                       android:layout_width="wrap_content"
+										                       android:layout_height="wrap_content"
+										                       
+										                       android:layout_marginTop="40dp"
+										                       android:layout_marginLeft="65dp"
+										                     
+										                       android:text="元"
+										                       android:textColor="#ffffff"
+										                       android:textSize="15dp" />
+
+				                                                   </RelativeLayout>
+										                          </RelativeLayout> 
+										              
+									                             </RelativeLayout  >
+	                                            </SlidingDrawer>
+     
+     
+     
+     
+     
+	
+</RelativeLayout>
+
